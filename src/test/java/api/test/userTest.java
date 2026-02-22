@@ -54,6 +54,24 @@ public class userTest {
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
 	}
+	
+	@Test(priority=2)
+	public void testGetUser1() {
+		Response response=UserEndPoints.readUser(this.userPayload.getUsername());
+		response.then().log().all();
+		
+		Assert.assertEquals(response.getStatusCode(), 200);
+		
+	}
+	
+	@Test(priority=2)
+	public void testGetUser3() {
+		Response response=UserEndPoints.readUser(this.userPayload.getUsername());
+		response.then().log().all();
+		
+		Assert.assertEquals(response.getStatusCode(), 200);
+		
+	}
 
 	@Test(priority=3)
 	public void testUpdateUser() {
